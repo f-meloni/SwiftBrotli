@@ -23,6 +23,9 @@
 /* Begin PBXBuildFile section */
 		9D8C2E2924223CC500033515 /* BrotliJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2E2824223CC500033515 /* BrotliJSONDecoder.swift */; };
 		9D8C2E2C242242A300033515 /* BrotliJSONDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2E2A2422416800033515 /* BrotliJSONDecoderTests.swift */; };
+		9D8C2E2E2422458D00033515 /* BrotliJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2E2D2422458D00033515 /* BrotliJSONEncoder.swift */; };
+		9D8C2E302422462600033515 /* BrotliJSONEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2E2F2422462600033515 /* BrotliJSONEncoderTests.swift */; };
+		9D8C2E322422464A00033515 /* BrotliDecodedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2E312422464A00033515 /* BrotliDecodedModel.swift */; };
 		OBJ_102 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_113 /* BrotliDecompressedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* BrotliDecompressedData.swift */; };
 		OBJ_114 /* BrotliGenericCompressedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* BrotliGenericCompressedData.swift */; };
@@ -93,6 +96,9 @@
 /* Begin PBXFileReference section */
 		9D8C2E2824223CC500033515 /* BrotliJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotliJSONDecoder.swift; sourceTree = "<group>"; };
 		9D8C2E2A2422416800033515 /* BrotliJSONDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotliJSONDecoderTests.swift; sourceTree = "<group>"; };
+		9D8C2E2D2422458D00033515 /* BrotliJSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotliJSONEncoder.swift; sourceTree = "<group>"; };
+		9D8C2E2F2422462600033515 /* BrotliJSONEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotliJSONEncoderTests.swift; sourceTree = "<group>"; };
+		9D8C2E312422464A00033515 /* BrotliDecodedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotliDecodedModel.swift; sourceTree = "<group>"; };
 		OBJ_10 /* dictionary.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dictionary.c; sourceTree = "<group>"; };
 		OBJ_11 /* transform.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = transform.c; sourceTree = "<group>"; };
 		OBJ_13 /* bit_reader.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bit_reader.c; sourceTree = "<group>"; };
@@ -222,6 +228,7 @@
 		OBJ_43 /* SwiftBrotli */ = {
 			isa = PBXGroup;
 			children = (
+				9D8C2E2D2422458D00033515 /* BrotliJSONEncoder.swift */,
 				OBJ_44 /* SwiftBrotli.swift */,
 				9D8C2E2824223CC500033515 /* BrotliJSONDecoder.swift */,
 			);
@@ -242,6 +249,7 @@
 			children = (
 				OBJ_47 /* Resources */,
 				9D8C2E2A2422416800033515 /* BrotliJSONDecoderTests.swift */,
+				9D8C2E2F2422462600033515 /* BrotliJSONEncoderTests.swift */,
 				OBJ_51 /* SwiftBrotliTests.swift */,
 				OBJ_52 /* XCTestManifests.swift */,
 			);
@@ -255,11 +263,12 @@
 				OBJ_48 /* BrotliDecompressedData.swift */,
 				OBJ_49 /* BrotliGenericCompressedData.swift */,
 				OBJ_50 /* BrotliTextCompressedData.swift */,
+				9D8C2E312422464A00033515 /* BrotliDecodedModel.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -268,7 +277,6 @@
 				OBJ_53 /* Products */,
 				OBJ_57 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_53 /* Products */ = {
@@ -395,7 +403,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_53 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -422,11 +430,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				9D8C2E322422464A00033515 /* BrotliDecodedModel.swift in Sources */,
 				OBJ_113 /* BrotliDecompressedData.swift in Sources */,
 				OBJ_114 /* BrotliGenericCompressedData.swift in Sources */,
 				9D8C2E2C242242A300033515 /* BrotliJSONDecoderTests.swift in Sources */,
 				OBJ_115 /* BrotliTextCompressedData.swift in Sources */,
 				OBJ_116 /* SwiftBrotliTests.swift in Sources */,
+				9D8C2E302422462600033515 /* BrotliJSONEncoderTests.swift in Sources */,
 				OBJ_117 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +478,7 @@
 			files = (
 				9D8C2E2924223CC500033515 /* BrotliJSONDecoder.swift in Sources */,
 				OBJ_93 /* SwiftBrotli.swift in Sources */,
+				9D8C2E2E2422458D00033515 /* BrotliJSONEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
