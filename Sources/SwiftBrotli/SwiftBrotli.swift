@@ -2,8 +2,8 @@ import CBrotli
 import Foundation
 
 public struct Brotli {
-    public func decompress(_ data: Data) -> Result<Data, DecompressionError> {
-        var decodedBuffer = [UInt8](repeating: 0, count: 1 << 19)
+    public func decompress(_ data: Data, maximumDecompressedSize: Int = defaultMaximumDecompressedSize) -> Result<Data, DecompressionError> {
+        var decodedBuffer = [UInt8](repeating: 0, count: maximumDecompressedSize)
         var decodedSize: Int = decodedBuffer.count
         
         let decompressResult = BrotliDecoderDecompress(data.count,
@@ -66,6 +66,10 @@ extension Brotli {
     
     public static var defaultQuality: Int32 {
         return BROTLI_DEFAULT_QUALITY
+    }
+    
+    public static var defaultMaximumDecompressedSize: Int {
+        return 1 << 19
     }
 }
 
