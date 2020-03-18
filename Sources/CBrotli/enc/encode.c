@@ -14,7 +14,6 @@
 #include "../common/constants.h"
 #include "../common/context.h"
 #include "../common/platform.h"
-#include "../common/version.h"
 #include "./backward_references.h"
 #include "./backward_references_hq.h"
 #include "./bit_cost.h"
@@ -1914,10 +1913,6 @@ const uint8_t* BrotliEncoderTakeOutput(BrotliEncoderState* s, size_t* size) {
     result = 0;
   }
   return result;
-}
-
-uint32_t BrotliEncoderVersion(void) {
-  return BROTLI_VERSION;
 }
 
 #if defined(__cplusplus) || defined(c_plusplus)

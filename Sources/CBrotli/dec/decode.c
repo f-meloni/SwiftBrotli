@@ -14,7 +14,6 @@
 #include "../common/dictionary.h"
 #include "../common/platform.h"
 #include "../common/transform.h"
-#include "../common/version.h"
 #include "./bit_reader.h"
 #include "./huffman.h"
 #include "./prefix.h"
@@ -2594,10 +2593,6 @@ const char* BrotliDecoderErrorString(BrotliDecoderErrorCode c) {
 #undef BROTLI_NOTHING_
     default: return "INVALID";
   }
-}
-
-uint32_t BrotliDecoderVersion() {
-  return BROTLI_VERSION;
 }
 
 #if defined(__cplusplus) || defined(c_plusplus)
