@@ -13,6 +13,33 @@ The specification of the Brotli Compressed Data Format is defined in [RFC 7932](
 ### Why use Brotli?
 Brotli uses a dictionary of common keywords and phrases on both client and server side and thus gives a better compression ratio for text data.
 
+### Usage
+
+
+#### Compress data
+```swift
+let brotli = Brotli()
+brotli.compress(data)
+```
+
+#### Decompress data
+```swift
+let brotli = Brotli()
+brotli.decompress(data)
+```
+
+#### Encode JSON object
+```swift
+let brotli = BrotliJSONEncoder()
+brotli.encode(object)
+```
+
+#### Decode JSON object
+```swift
+let brotli = BrotliJSONDecoder()
+let result: Result<Object, Error> = brotli.decode(object)
+```
+
 #### Articles and comparisons:
 - https://medium.com/oyotech/how-brotli-compression-gave-us-37-latency-improvement-14d41e50fee4
 - https://expeditedsecurity.com/blog/nginx-brotli/
