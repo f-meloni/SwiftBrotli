@@ -34,12 +34,12 @@ brotli.decompress(data)
 
 #### Encode JSON object
 ```swift
-let brotli = BrotliJSONEncoder()
-brotli.encode(object)
+let encoder = BrotliJSONEncoder()
+encoder.encode(object)
 ```
 
 #### Decode JSON object
 ```swift
-let brotli = BrotliJSONDecoder()
-let result: Result<Object, Error> = brotli.decode(object)
+let decoder = BrotliJSONDecoder()
+let result: Result<Object, Error> = decoder.decode(data)
 ```
