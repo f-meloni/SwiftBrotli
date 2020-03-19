@@ -1,6 +1,6 @@
 # SwiftBrotli
 
-![Swift 5.2](https://img.shields.io/badge/Swift-5.0-blue.svg)
+![Swift 5.2](https://img.shields.io/badge/Swift-5.2-blue.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 A lightweight Swift wrapper for Google's [brotli](https://github.com/google/brotli)
@@ -17,3 +17,29 @@ Brotli uses a dictionary of common keywords and phrases on both client and serve
 - https://medium.com/oyotech/how-brotli-compression-gave-us-37-latency-improvement-14d41e50fee4
 - https://expeditedsecurity.com/blog/nginx-brotli/
 - https://wp-rocket.me/blog/brotli-vs-gzip-compression/
+
+### Usage
+
+#### Compress data
+```swift
+let brotli = Brotli()
+brotli.compress(data)
+```
+
+#### Decompress data
+```swift
+let brotli = Brotli()
+brotli.decompress(data)
+```
+
+#### Encode JSON object
+```swift
+let encoder = BrotliJSONEncoder()
+encoder.encode(object)
+```
+
+#### Decode JSON object
+```swift
+let decoder = BrotliJSONDecoder()
+let result: Result<Object, Error> = decoder.decode(data)
+```
