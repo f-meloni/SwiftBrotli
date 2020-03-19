@@ -26,6 +26,7 @@
 		9D8C2E2E2422458D00033515 /* BrotliJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2E2D2422458D00033515 /* BrotliJSONEncoder.swift */; };
 		9D8C2E302422462600033515 /* BrotliJSONEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2E2F2422462600033515 /* BrotliJSONEncoderTests.swift */; };
 		9D8C2E322422464A00033515 /* BrotliDecodedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2E312422464A00033515 /* BrotliDecodedModel.swift */; };
+		9D8C2E342423AF2300033515 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C2E332423AF2300033515 /* memory.c */; };
 		OBJ_102 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_113 /* BrotliDecompressedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* BrotliDecompressedData.swift */; };
 		OBJ_114 /* BrotliGenericCompressedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* BrotliGenericCompressedData.swift */; };
@@ -54,7 +55,6 @@
 		OBJ_80 /* entropy_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* entropy_encode.c */; };
 		OBJ_81 /* histogram.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* histogram.c */; };
 		OBJ_82 /* literal_cost.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* literal_cost.c */; };
-		OBJ_83 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* memory.c */; };
 		OBJ_84 /* metablock.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* metablock.c */; };
 		OBJ_85 /* static_dict.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* static_dict.c */; };
 		OBJ_86 /* utf8_util.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* utf8_util.c */; };
@@ -99,6 +99,7 @@
 		9D8C2E2D2422458D00033515 /* BrotliJSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotliJSONEncoder.swift; sourceTree = "<group>"; };
 		9D8C2E2F2422462600033515 /* BrotliJSONEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotliJSONEncoderTests.swift; sourceTree = "<group>"; };
 		9D8C2E312422464A00033515 /* BrotliDecodedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrotliDecodedModel.swift; sourceTree = "<group>"; };
+		9D8C2E332423AF2300033515 /* memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memory.c; sourceTree = "<group>"; };
 		OBJ_10 /* dictionary.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dictionary.c; sourceTree = "<group>"; };
 		OBJ_11 /* transform.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = transform.c; sourceTree = "<group>"; };
 		OBJ_13 /* bit_reader.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bit_reader.c; sourceTree = "<group>"; };
@@ -119,7 +120,6 @@
 		OBJ_29 /* entropy_encode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = entropy_encode.c; sourceTree = "<group>"; };
 		OBJ_30 /* histogram.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = histogram.c; sourceTree = "<group>"; };
 		OBJ_31 /* literal_cost.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = literal_cost.c; sourceTree = "<group>"; };
-		OBJ_32 /* memory.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = memory.c; sourceTree = "<group>"; };
 		OBJ_33 /* metablock.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = metablock.c; sourceTree = "<group>"; };
 		OBJ_34 /* static_dict.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = static_dict.c; sourceTree = "<group>"; };
 		OBJ_35 /* utf8_util.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utf8_util.c; sourceTree = "<group>"; };
@@ -195,9 +195,9 @@
 				OBJ_27 /* encode.c */,
 				OBJ_28 /* encoder_dict.c */,
 				OBJ_29 /* entropy_encode.c */,
+				9D8C2E332423AF2300033515 /* memory.c */,
 				OBJ_30 /* histogram.c */,
 				OBJ_31 /* literal_cost.c */,
-				OBJ_32 /* memory.c */,
 				OBJ_33 /* metablock.c */,
 				OBJ_34 /* static_dict.c */,
 				OBJ_35 /* utf8_util.c */,
@@ -455,6 +455,7 @@
 				OBJ_70 /* backward_references_hq.c in Sources */,
 				OBJ_71 /* bit_cost.c in Sources */,
 				OBJ_72 /* block_splitter.c in Sources */,
+				9D8C2E342423AF2300033515 /* memory.c in Sources */,
 				OBJ_73 /* brotli_bit_stream.c in Sources */,
 				OBJ_74 /* cluster.c in Sources */,
 				OBJ_75 /* compress_fragment.c in Sources */,
@@ -465,7 +466,6 @@
 				OBJ_80 /* entropy_encode.c in Sources */,
 				OBJ_81 /* histogram.c in Sources */,
 				OBJ_82 /* literal_cost.c in Sources */,
-				OBJ_83 /* memory.c in Sources */,
 				OBJ_84 /* metablock.c in Sources */,
 				OBJ_85 /* static_dict.c in Sources */,
 				OBJ_86 /* utf8_util.c in Sources */,

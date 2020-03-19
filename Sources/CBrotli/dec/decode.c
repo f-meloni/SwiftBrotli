@@ -57,58 +57,6 @@ static const uint8_t kCodeLengthPrefixValue[16] = {
   0, 4, 3, 2, 0, 4, 3, 1, 0, 4, 3, 2, 0, 4, 3, 5,
 };
 
-BROTLI_BOOL BrotliDecoderSetParameter(
-    BrotliDecoderState* state, BrotliDecoderParameter p, uint32_t value) {
-  if (state->state != BROTLI_STATE_UNINITED) return BROTLI_FALSE;
-  switch (p) {
-    case BROTLI_DECODER_PARAM_DISABLE_RING_BUFFER_REALLOCATION:
-      state->canny_ringbuffer_allocation = !!value ? 0 : 1;
-      return BROTLI_TRUE;
-
-    case BROTLI_DECODER_PARAM_LARGE_WINDOW:
-      state->large_window = TO_BROTLI_BOOL(!!value);
-      return BROTLI_TRUE;
-
-    default: return BROTLI_FALSE;
-  }
-}
-
-BrotliDecoderState* BrotliDecoderCreateInstance(
-    brotli_alloc_func alloc_func, brotli_free_func free_func, void* opaque) {
-  BrotliDecoderState* state = 0;
-  if (!alloc_func && !free_func) {
-    state = (BrotliDecoderState*)malloc(sizeof(BrotliDecoderState));
-  } else if (alloc_func && free_func) {
-    state = (BrotliDecoderState*)alloc_func(opaque, sizeof(BrotliDecoderState));
-  }
-  if (state == 0) {
-    BROTLI_DUMP();
-    return 0;
-  }
-  if (!BrotliDecoderStateInit(state, alloc_func, free_func, opaque)) {
-    BROTLI_DUMP();
-    if (!alloc_func && !free_func) {
-      free(state);
-    } else if (alloc_func && free_func) {
-      free_func(opaque, state);
-    }
-    return 0;
-  }
-  return state;
-}
-
-/* Deinitializes and frees BrotliDecoderState instance. */
-void BrotliDecoderDestroyInstance(BrotliDecoderState* state) {
-  if (!state) {
-    return;
-  } else {
-    brotli_free_func free_func = state->free_func;
-    void* opaque = state->memory_manager_opaque;
-    BrotliDecoderStateCleanup(state);
-    free_func(opaque, state);
-  }
-}
-
 /* Saves error code and converts it to BrotliDecoderResult. */
 static BROTLI_NOINLINE BrotliDecoderResult SaveErrorCode(
     BrotliDecoderState* s, BrotliDecoderErrorCode e) {

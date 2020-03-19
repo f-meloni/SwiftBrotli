@@ -1896,25 +1896,6 @@ BROTLI_BOOL BrotliEncoderHasMoreOutput(BrotliEncoderState* s) {
   return TO_BROTLI_BOOL(s->available_out_ != 0);
 }
 
-const uint8_t* BrotliEncoderTakeOutput(BrotliEncoderState* s, size_t* size) {
-  size_t consumed_size = s->available_out_;
-  uint8_t* result = s->next_out_;
-  if (*size) {
-    consumed_size = BROTLI_MIN(size_t, *size, s->available_out_);
-  }
-  if (consumed_size) {
-    s->next_out_ += consumed_size;
-    s->available_out_ -= consumed_size;
-    s->total_out_ += consumed_size;
-    CheckFlushComplete(s);
-    *size = consumed_size;
-  } else {
-    *size = 0;
-    result = 0;
-  }
-  return result;
-}
-
 #if defined(__cplusplus) || defined(c_plusplus)
 }  /* extern "C" */
 #endif
