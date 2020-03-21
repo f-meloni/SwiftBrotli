@@ -14,7 +14,7 @@ var brotliDecompressedData: Data {
                   "percent" : 0
                 }
               },
-              "filename" : "\\/Users\\/franco\\/Projects\\/SwiftBrotli\\/Sources\\/SwiftBrotli\\/BrotliDecoder.swift"
+              "filename" : "/Users/franco/Projects/SwiftBrotli/Sources/SwiftBrotli/BrotliDecoder.swift"
             },
             {
               "summary" : {
@@ -24,7 +24,7 @@ var brotliDecompressedData: Data {
                   "percent" : 87.71929931640625
                 }
               },
-              "filename" : "\\/Users\\/franco\\/Projects\\/SwiftBrotli\\/Sources\\/SwiftBrotli\\/SwiftBrotli.swift"
+              "filename" : "/Users/franco/Projects/SwiftBrotli/Sources/SwiftBrotli/SwiftBrotli.swift"
             },
             {
               "summary" : {
@@ -34,7 +34,7 @@ var brotliDecompressedData: Data {
                   "percent" : 100
                 }
               },
-              "filename" : "\\/Users\\/franco\\/Projects\\/SwiftBrotli\\/Tests\\/SwiftBrotliTests\\/Resources\\/BrotliDecompressedData.swift"
+              "filename" : "/Users/franco/Projects/SwiftBrotli/Tests/SwiftBrotliTests/Resources/BrotliDecompressedData.swift"
             },
             {
               "summary" : {
@@ -44,7 +44,7 @@ var brotliDecompressedData: Data {
                   "percent" : 100
                 }
               },
-              "filename" : "\\/Users\\/franco\\/Projects\\/SwiftBrotli\\/Tests\\/SwiftBrotliTests\\/Resources\\/BrotliGenericCompressedData.swift"
+              "filename" : "/Users/franco/Projects/SwiftBrotli/Tests/SwiftBrotliTests/Resources/BrotliGenericCompressedData.swift"
             },
             {
               "summary" : {
@@ -54,7 +54,7 @@ var brotliDecompressedData: Data {
                   "percent" : 100
                 }
               },
-              "filename" : "\\/Users\\/franco\\/Projects\\/SwiftBrotli\\/Tests\\/SwiftBrotliTests\\/Resources\\/BrotliTextCompressedData.swift"
+              "filename" : "/Users/franco/Projects/SwiftBrotli/Tests/SwiftBrotliTests/Resources/BrotliTextCompressedData.swift"
             },
             {
               "summary" : {
@@ -64,7 +64,7 @@ var brotliDecompressedData: Data {
                   "percent" : 100
                 }
               },
-              "filename" : "\\/Users\\/franco\\/Projects\\/SwiftBrotli\\/Tests\\/SwiftBrotliTests\\/SwiftBrotliTests.swift"
+              "filename" : "/Users/franco/Projects/SwiftBrotli/Tests/SwiftBrotliTests/SwiftBrotliTests.swift"
             }
           ]
         }
