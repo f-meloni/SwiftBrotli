@@ -6,7 +6,7 @@ final class BrotliJSONEncoderTests: XCTestCase {
         let encoder = BrotliJSONEncoder()
         
         let result: Result<Data, Error>
-        result = encoder.encode(brotliDecodedModel)
+        result = encoder.encode(brotliDecodedModel, outputFormatting: [])
         
         print(String(data: try Brotli().decompress(try result.get()).get(), encoding: .utf8) ?? "")
         
