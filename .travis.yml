@@ -11,7 +11,7 @@ matrix:
       name: iOS tests
       osx_image: xcode11.3
       script:
-        - xcodebuild test -scheme SwiftBrotli-Package -destination 'platform=iOS Simulator,name=iPhone 6s'
+        - xcodebuild test -scheme SwiftBrotli-Package -destination 'platform=iOS Simulator,name=iPhone 11 Pro, OS=13.3'
 
     - os: linux
       language: generic
