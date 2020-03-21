@@ -7,7 +7,6 @@ final class BrotliJSONDecoderTests: XCTestCase {
         
         let result: Result<SPMCoverage, Error> = decoder.decode(data: brotliTextCompressedData)
         
-        
         XCTAssertEqual(try result.get(), brotliDecodedModel)
     }
 }

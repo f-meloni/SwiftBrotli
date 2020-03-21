@@ -8,6 +8,8 @@ final class BrotliJSONEncoderTests: XCTestCase {
         let result: Result<Data, Error>
         result = encoder.encode(brotliDecodedModel)
         
+        print(String(data: try Brotli().decompress(try result.get()).get(), encoding: .utf8) ?? "")
+        
         XCTAssertEqual(try result.get(), brotliTextCompressedData)
     }
 }
