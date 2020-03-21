@@ -12,6 +12,18 @@ matrix:
       osx_image: xcode11.3
       script:
         - xcodebuild test -scheme SwiftBrotli-Package -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=13.3'
+        
+    - os: osx
+      name: OSX tests
+      osx_image: xcode11.3
+      script:
+        - xcodebuild test -scheme SwiftBrotli-Package
+        
+    - os: osx
+      name: tvOS tests
+      osx_image: xcode11.3
+      script:
+        - xcodebuild test -scheme SwiftBrotli-Package -destination 'platform=tvOS Simulator,name=Apple TV 4K,OS=13.3'
 
     - os: linux
       language: generic
