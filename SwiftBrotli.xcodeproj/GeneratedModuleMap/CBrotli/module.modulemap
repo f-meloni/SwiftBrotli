@@ -1,4 +1,4 @@
 module CBrotli {
-    umbrella "/Users/franco/Projects/SwiftBrotli/Sources/CBrotli/include"
+    umbrella "../../../Sources/CBrotli/include"
     export *
 }
