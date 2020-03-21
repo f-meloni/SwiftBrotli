@@ -1,0 +1,36 @@
+language: generic
+
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode11.3
+      script:
+        - swift test
+
+    - os: osx
+      name: iOS tests
+      osx_image: xcode11.3
+      script:
+        - xcodebuild test -scheme SwiftBrotli-Package -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=13.3'
+        
+    - os: osx
+      name: OSX tests
+      osx_image: xcode11.3
+      script:
+        - xcodebuild test -scheme SwiftBrotli-Package
+        
+    - os: osx
+      name: tvOS tests
+      osx_image: xcode11.3
+      script:
+        - xcodebuild test -scheme SwiftBrotli-Package -destination 'platform=tvOS Simulator,name=Apple TV 4K,OS=13.3'
+
+    - os: linux
+      language: generic
+      sudo: required
+      dist: trusty
+      install:
+        - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
+        - swiftenv global 5.1.1
+      script:
+        - swift test
