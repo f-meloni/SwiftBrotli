@@ -6,7 +6,10 @@ final class BrotliJSONEncoderTests: XCTestCase {
         let encoder = BrotliJSONEncoder()
         
         let result: Result<Data, Error>
+
         result = encoder.encode(brotliDecodedModel, outputFormatting: [])
+        
+        print([UInt8](try result.get()))
         
         #if os(Linux)
         XCTAssertEqual(try result.get(), brotliLinuxModelCompressedData)
