@@ -4,6 +4,8 @@ public struct BrotliJSONDecoder {
     private let brotli = Brotli()
     private let jsonDecoder = JSONDecoder()
     
+    public init() {}
+    
     public func decode<T: Decodable>(data: Data) -> Result<T, Error> {
         brotli.decompress(data)
             .mapError { $0 as Error }

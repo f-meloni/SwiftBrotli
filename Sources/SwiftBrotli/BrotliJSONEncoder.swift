@@ -4,6 +4,8 @@ public struct BrotliJSONEncoder {
     private let brotli = Brotli()
     private let jsonEncoder = JSONEncoder()
     
+    public init() {}
+    
     public func encode<T: Encodable>(_ object: T) -> Result<Data, Error> {
         #if !os(Linux)
         if #available(tvOS 13.0, OSX 10.15, iOS 13, *) {

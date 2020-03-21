@@ -2,6 +2,8 @@ import CBrotli
 import Foundation
 
 public struct Brotli {
+    public init() {}
+    
     public func decompress(_ data: Data, maximumDecompressedSize: Int = defaultMaximumDecompressedSize) -> Result<Data, DecompressionError> {
         var decodedBuffer = [UInt8](repeating: 0, count: maximumDecompressedSize)
         var decodedSize: Int = decodedBuffer.count
