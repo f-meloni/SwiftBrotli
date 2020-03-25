@@ -1,6 +1,6 @@
 # SwiftBrotli
 
-![Swift 5.1](https://img.shields.io/badge/Swift-5.2-blue.svg)
+![Swift 5.1](https://img.shields.io/badge/Swift-5.1-blue.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 A lightweight Swift wrapper for Google's [brotli](https://github.com/google/brotli)
