@@ -797,7 +797,7 @@ BrotliEncoderState* BrotliEncoderCreateInstance(
     brotli_alloc_func alloc_func, brotli_free_func free_func, void* opaque) {
   BrotliEncoderState* state = 0;
   if (!alloc_func && !free_func) {
-    state = (BrotliEncoderState*)malloc(sizeof(BrotliEncoderState));
+    state = (BrotliEncoderState*)calloc(1,sizeof(BrotliEncoderState));
   } else if (alloc_func && free_func) {
     state = (BrotliEncoderState*)alloc_func(opaque, sizeof(BrotliEncoderState));
   }
